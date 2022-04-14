@@ -21,7 +21,7 @@ function cb(error,response,html){
                 if(tds.length>1){
                     let name = tds[0].textContent;
                     let wicket = tds[4].textContent;
-                    // console.log("Name of Bowler ---> ",name,"     Wickets ---> ",wicket);
+                    console.log("Name of Bowler ---> ",name,"     Wickets ---> ",wicket);
                     if(wicket>mostWicket){
                         mostWicket = wicket;
                         nameOfHighestWicketTacker = name;

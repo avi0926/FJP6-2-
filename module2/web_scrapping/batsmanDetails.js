@@ -6,14 +6,14 @@ const link = "https://www.espncricinfo.com/series/ipl-2021-1249214/royal-challen
 
 request(link,cb);
 
-
 function cb(error,response,html){
     if(error){
         console.log(error);
     }else{
         const dom = new JSDOM(html);
         const document = dom.window.document;
-        let batsmen = document.querySelectorAll(".batsman-cell.text-truncate.out a");
+        // let batsmen = document.querySelectorAll(".batsman-cell.text-truncate.out a");
+        let batsmen = document.querySelectorAll("ReactCollapse--content");
         for(let i=0;i<batsmen.length;i++){
             let batsmanLink = batsmen[i].href;
             let completeBatsmanLink = "https://www.espncricinfo.com"+batsmanLink;
