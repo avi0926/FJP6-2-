@@ -22,7 +22,7 @@ function cb(error, response, html) {
         for (let i = 0; i < 60; i++) {
             let anchorTagAll = allScorecardTags[i].querySelectorAll("a");
             let link = anchorTagAll[2].href;
-            let completeLink = "https://www.espncricinfo.com" + link;
+            // let completeLink = "https://www.espncricinfo.com" + link;
             // console.log(completeLink);
             // request(completeLink, cb2);
             // counter++;
@@ -31,26 +31,26 @@ function cb(error, response, html) {
     }
 }
 
-function cb2(error, response, html) {
-    if (error) {
-        console.log(error);
-    } else {
-        const dom = new JSDOM(html);
-        const document = dom.window.document;
-        let batsmenRow = document.querySelectorAll('tbody [class="ds-border-b ds-border-line ds-text-tight-s"]');
-        // let batsmenRow = document.querySelectorAll("ds-border-b ds-border-line ds-text-tight-s ds-border-none");
-        for (let i = 0; i < batsmenRow.length; i++) {
-            let cells = batsmenRow[i].querySelectorAll("td");
-            if (cells.length == 8) {
-                let name = cells[0].textContent;
-                let runs = cells[2].textContent;
-                let balls = cells[3].textContent;
-                let fours = cells[5].textContent;
-                let sixes = cells[6].textContent;
+// function cb2(error, response, html) {
+//     if (error) {
+//         console.log(error);
+//     } else {
+//         const dom = new JSDOM(html);
+//         const document = dom.window.document;
+//         let batsmenRow = document.querySelectorAll('tbody [class="ds-border-b ds-border-line ds-text-tight-s"]');
+//         // let batsmenRow = document.querySelectorAll("ds-border-b ds-border-line ds-text-tight-s ds-border-none");
+//         for (let i = 0; i < batsmenRow.length; i++) {
+//             let cells = batsmenRow[i].querySelectorAll("td");
+//             if (cells.length == 8) {
+//                 let name = cells[0].textContent;
+//                 let runs = cells[2].textContent;
+//                 let balls = cells[3].textContent;
+//                 let fours = cells[5].textContent;
+//                 let sixes = cells[6].textContent;
                 // console.log("Name : ",name,"Runs : ",runs,"Balls : ",balls,"Fours : ",fours,"Sixes : ",sixes);
                 // processPlayer(name, runs, balls, fours, sixes);
-            }
-        }
+            // }
+        // }
 //         counter--;
 //         if (counter == 0) {
 //             console.log(leaderboard);
@@ -79,8 +79,8 @@ function cb2(error, response, html) {
 //             }
 //             xlsx(dataExcel, settings) // Will download the excel file
 //         }
-    }
-}
+//     }
+// }
 
 // function processPlayer(name, runs, balls, fours, sixes) {
 //     runs = Number(runs);

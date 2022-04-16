@@ -1,3 +1,4 @@
+
 const request = require("request");
 const jsdom = require("jsdom");
 const { JSDOM } = jsdom;
@@ -13,7 +14,9 @@ function cb(error,response,html){
         const document =  dom.window.document;
         let mostWicket = 0;
         let nameOfHighestWicketTacker = "";
-        let bowlersTable = document.querySelectorAll(".table.bowler");
+        let bowlersT = document.querySelectorAll(".ds-w-full.ds-table.ds-table-xs.ds-table-fixed");
+        let bowlersTable =[bowlersT[1],bowlersT[3]]; 
+        console.log(bowlersTable.length);
         for(let i=0;i<bowlersTable.length;i++){
             let rows = bowlersTable[i].querySelectorAll("tbody tr");
             for(let j=0;j<rows.length;j++){
