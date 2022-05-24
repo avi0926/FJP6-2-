@@ -1,0 +1,35 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+.menu-options{
+    border: 0.5px solid black;
+    height: 30px;
+}
+
+.address-content{
+    border: 0.5px solid black;
+    height: 25px;
+}
+
+.cells-content{
+    background-color: aquamarine;
+    height: 85vh;
+    overflow: auto;
+}
+
+.sheets{
+    border: 0.5px solid black;
+    height: 30px;
+}
+
+.row{
+    display: flex;
+}
+.cell{
+    border: 0.2px solid black;
+    height: 30px;
+    width: 100px;
+}
